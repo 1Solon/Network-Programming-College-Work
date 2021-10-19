@@ -1,0 +1,7 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "commons-fileupload-1.4.jar",
+        "commons-net-current.jar"
+    ]
+}
