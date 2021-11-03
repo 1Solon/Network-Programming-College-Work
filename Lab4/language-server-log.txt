@@ -11,3 +11,13 @@
 14:35:12 stream.go:37: Sent: {"jsonrpc":"2.0","result":{"capabilities":{"textDocumentSync":{"openClose":true,"change":1,"save":{}},"completionProvider":{"triggerCharacters":[" ",":","+","-","*","/","%","=","^","\u003e","\u003c"]},"signatureHelpProvider":{},"documentFormattingProvider":true,"documentOnTypeFormattingProvider":{"firstTriggerCharacter":""},"workspace":{"workspaceFolders":{}}}},"id":0}
 14:35:12 stream.go:85: Received: {"jsonrpc":"2.0","method":"initialized","params":{}}
 14:35:12 stream.go:85: Received: {"jsonrpc":"2.0","method":"workspace/didChangeConfiguration","params":{"settings":{"yolol":{"autoopen":{"enable":true},"formatting":{"mode":"Compact"},"lengthChecking":{"mode":"Strict"},"chipType":"Auto","debug":{"enable":true},"hotkeys":{"enable":true}},"nolol":{}}}}
+14:58:42 stream.go:85: Received: {"jsonrpc":"2.0","method":"$/setTraceNotification","params":{"value":"off"}}
+14:58:56 stream.go:85: Received: {"jsonrpc":"2.0","id":1,"method":"workspace/executeCommand","params":{"command":"activeDocument","arguments":["git:/c%3A/Users/Solon/Desktop/Projects/College/Year3/Network-Programming-College-Work/Lab3/language-server-log.txt?%7B%22path%22%3A%22c%3A%5C%5CUsers%5C%5CSolon%5C%5CDesktop%5C%5CProjects%5C%5CCollege%5C%5CYear3%5C%5CNetwork-Programming-College-Work%5C%5CLab3%5C%5Clanguage-server-log.txt%22%2C%22ref%22%3A%22HEAD%22%7D"]}}
+14:58:56 stream.go:37: Sent: {"jsonrpc":"2.0","result":null,"id":1}
+14:58:58 stream.go:85: Received: {"jsonrpc":"2.0","id":2,"method":"workspace/executeCommand","params":{"command":"activeDocument","arguments":["file:///c%3A/Users/Solon/Desktop/Projects/College/Year3/Network-Programming-College-Work/Lab4/udpDate.java"]}}
+14:58:58 stream.go:37: Sent: {"jsonrpc":"2.0","result":null,"id":2}
+14:59:12 stream.go:85: Received: {"jsonrpc":"2.0","id":3,"method":"workspace/executeCommand","params":{"command":"activeDocument","arguments":["file:///c%3A/Users/Solon/Desktop/Projects/College/Year3/Network-Programming-College-Work/Lab4/udpDate.java"]}}
+14:59:12 stream.go:37: Sent: {"jsonrpc":"2.0","result":null,"id":3}
+14:59:14 stream.go:85: Received: {"jsonrpc":"2.0","id":4,"method":"workspace/executeCommand","params":{"command":"activeDocument","arguments":["vscode-userdata:/c%3A/Users/Solon/AppData/Roaming/Code/User/settings.json"]}}
+14:59:14 stream.go:37: Sent: {"jsonrpc":"2.0","result":null,"id":4}
+14:59:16 stream.go:85: Received: {"jsonrpc":"2.0","id":5,"method":"shutdown","params":null}
