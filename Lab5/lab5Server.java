@@ -21,23 +21,19 @@ public class lab5Server {
 
         while (true) {
             out.println("What do you want to do?");
-
-            String opt = "";
-            while ((opt = in.readLine()) != null){}
-
-            switch (opt) {
+            switch (in.readLine()) {
             case "1":
                 out.println("What is the first number?");
                 a = Integer.parseInt(in.readLine());
                 out.println("What is the second number?");
                 b = Integer.parseInt(in.readLine());
                 out.println(a + " + " + b + " = " + (a + b));
-                break;
+                continue;
 
             case "2":
                 out.println("What number would you like to squareroot?");
                 out.println(Math.sqrt(Integer.parseInt(in.readLine())));
-                break;
+                continue;
 
             case "3":
                 out.println("What is the base?:");
@@ -45,7 +41,7 @@ public class lab5Server {
                 out.println("What is the exponent?:");
                 b = Integer.parseInt(in.readLine());
                 out.println(a + "^" + b + " is " + Math.pow(a, b));
-                break;
+                continue;
 
             case "0":
                 out.println("Goodbye!");
@@ -57,7 +53,7 @@ public class lab5Server {
 
             default:
                 out.println("Something wrong has happened here!");
-                break;
+                continue;
             }
         }
     }

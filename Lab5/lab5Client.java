@@ -27,8 +27,8 @@ public class lab5Client {
         PrintWriter call = new PrintWriter(clientSocket.getOutputStream(), true);
 
         while (true){
-            call.println();
             System.out.println(response.readLine());
+            call.println(reader.readLine());
         }
     }
 }
