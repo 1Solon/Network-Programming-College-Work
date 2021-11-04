@@ -16,38 +16,54 @@ public class lab5Server {
         clientSocket = serverSocket.accept();
         out = new PrintWriter(clientSocket.getOutputStream(), true);
         in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+        int a;
+        int b;
 
+        while (true) {
+            out.println("What do you want to do?");
 
-        String clientOutput = in.readLine();
+            String opt = "";
+            while ((opt = in.readLine()) != null){}
 
-        String[] clientCommands = clientOutput.split(":");
-        
-        switch (clientCommands[0]) {
+            switch (opt) {
             case "1":
-            int a = a.parseInt(clientCommands[2]));
-            out.println(a+b);
+                out.println("What is the first number?");
+                a = Integer.parseInt(in.readLine());
+                out.println("What is the second number?");
+                b = Integer.parseInt(in.readLine());
+                out.println(a + " + " + b + " = " + (a + b));
                 break;
-    
+
             case "2":
+                out.println("What number would you like to squareroot?");
+                out.println(Math.sqrt(Integer.parseInt(in.readLine())));
                 break;
-    
+
             case "3":
+                out.println("What is the base?:");
+                a = Integer.parseInt(in.readLine());
+                out.println("What is the exponent?:");
+                b = Integer.parseInt(in.readLine());
+                out.println(a + "^" + b + " is " + Math.pow(a, b));
                 break;
-    
+
             case "0":
+                out.println("Goodbye!");
+                in.close();
+                out.close();
+                clientSocket.close();
+                serverSocket.close();
+                System.exit(0);
+
+            default:
+                out.println("Something wrong has happened here!");
                 break;
-    
             }
+        }
     }
 
-    public void stop() throws IOException {
-        in.close();
-        out.close();
-        clientSocket.close();
-        serverSocket.close();
-    }
     public static void main(String[] args) throws IOException {
-        lab5Server server=new lab5Server();
+        lab5Server server = new lab5Server();
         server.start(6666);
     }
 }
