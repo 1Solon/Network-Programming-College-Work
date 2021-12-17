@@ -27,8 +27,6 @@ public class Client extends JFrame {
  
                 String quote = new String(buffer, 0, response.getLength());
 
-
-
 				String message = (String) in.readObject();
 				label.setText("Message from Server: " + message);
 
